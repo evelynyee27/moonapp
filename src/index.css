@@ -10,15 +10,20 @@
 @theme {
   --font-varela: "Varela Round", sans-serif;
   --animate-spin-and-slide: spin-and-slide 10s linear infinite;
-
 }
 
-  @keyframes spin-and-slide {
-    from {
-      transform: translateY(0%) rotate(0deg);
-    }
-
-    to {
-      transform: translateY(50px) rotate(360deg);
-    }
+@keyframes spin-and-slide {
+  from {
+    transform: translateY(0%) rotate(0deg);
   }
+
+  to {
+    transform: translateY(50px) rotate(360deg);
+  }
+}
+
+@layer theme {
+  :root, :host {
+    --default-font-family: "Varela Round", sans-serif;
+  }
+}

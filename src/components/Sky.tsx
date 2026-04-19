@@ -30,19 +30,21 @@ const Sky = ({ numberOfStars }: { numberOfStars: number }) => {
         style={{
           width: `${width}%`,
           top: `${top}%`,
-          left: `${left}%`
+          left: `${left}%`,
+          opacity: .70
         }}
       />
     );
   }
 
   return (
-    <div className="absolute h-full w-full">
+    <div className="h-full w-full">
       {smallStars}
       {bigStar(2, 20, 10)}
       {bigStar(1, 10, 25)}
       {bigStar(1, 90, 5)}
       {bigStar(1, 70, 30)}
+      {bigStar(1, 10, 65)}
       {bigStar(1, 40, 50)}
       {bigStar(2, 60, 70)}
       {bigStar(1, 80, 85)}
