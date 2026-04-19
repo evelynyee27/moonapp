@@ -1,13 +1,17 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router";
+
 import App from "./App.tsx";
-import { BrowserRouter } from "react-router";
+import Lobby from "./Lobby.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-      <App />
+      <Routes>
+        <Route index element={<App />} />
+        <Route path="/lobby" element={<Lobby />}/>
+      </Routes>
     </BrowserRouter>
-    ,
   </StrictMode>,
 );

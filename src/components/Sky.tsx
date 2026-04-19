@@ -1,7 +1,9 @@
 "use client";
 
-// small circle stars
+
 const Sky = ({ numberOfStars }: { numberOfStars: number }) => {
+
+  // small circle stars, each has a random pos after reload
   const smallStars = Array.from({ length: numberOfStars }).map((_, index) => {
     const top = Math.random() * 100;
     const left = Math.random() * 100;
