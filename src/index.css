@@ -10,6 +10,7 @@
 @theme {
   --font-varela: "Varela Round", sans-serif;
   --animate-spin-and-slide: spin-and-slide 10s linear infinite;
+  --animate-float: float 10s infinite;
 }
 
 @keyframes spin-and-slide {
@@ -19,6 +20,23 @@
 
   to {
     transform: translateY(50px) rotate(360deg);
+  }
+}
+
+// fix for the moon later
+@keyframes float {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(-50px);
+  }
+}
+
+@layer theme {
+  :root, :host {
+    --default-font-family: "Varela Round", sans-serif;
   }
 }
 
