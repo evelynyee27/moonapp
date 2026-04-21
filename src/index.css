@@ -10,7 +10,7 @@
 @theme {
   --font-varela: "Varela Round", sans-serif;
   --animate-spin-and-slide: spin-and-slide 10s linear infinite;
-  --animate-float: float 10s infinite;
+  --animate-floating: floating 5s ease-in-out infinite;
 }
 
 @keyframes spin-and-slide {
@@ -23,25 +23,30 @@
   }
 }
 
-// fix for the moon later
-@keyframes float {
-  from {
-    transform: translateY(0%);
+@keyframes floating {
+  0% {
+    transform: translateY(0);
   }
 
-  to {
-    transform: translateY(-50px);
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
 
 @layer theme {
-  :root, :host {
+  :root,
+  :host {
     --default-font-family: "Varela Round", sans-serif;
   }
 }
 
 @layer theme {
-  :root, :host {
+  :root,
+  :host {
     --default-font-family: "Varela Round", sans-serif;
   }
 }
